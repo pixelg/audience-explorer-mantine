@@ -31,6 +31,8 @@ const RAW_RUNTIME_STATE =
           ["@mantine/charts", "virtual:502a8ef1ee31280291343453a54a4de23612aac97816f5ab8b69b06d4534faf613cc9b29f244f481e5355cb209aa4472451bbfcd1c98fbaec1c1d4cf39950193#npm:7.17.1"],\
           ["@mantine/core", "virtual:502a8ef1ee31280291343453a54a4de23612aac97816f5ab8b69b06d4534faf613cc9b29f244f481e5355cb209aa4472451bbfcd1c98fbaec1c1d4cf39950193#npm:7.17.1"],\
           ["@mantine/hooks", "virtual:502a8ef1ee31280291343453a54a4de23612aac97816f5ab8b69b06d4534faf613cc9b29f244f481e5355cb209aa4472451bbfcd1c98fbaec1c1d4cf39950193#npm:7.17.1"],\
+          ["@tabler/icons-react", "virtual:502a8ef1ee31280291343453a54a4de23612aac97816f5ab8b69b06d4534faf613cc9b29f244f481e5355cb209aa4472451bbfcd1c98fbaec1c1d4cf39950193#npm:3.30.0"],\
+          ["@types/node", "npm:22.13.8"],\
           ["@types/react", "npm:19.0.10"],\
           ["@types/react-dom", "virtual:502a8ef1ee31280291343453a54a4de23612aac97816f5ab8b69b06d4534faf613cc9b29f244f481e5355cb209aa4472451bbfcd1c98fbaec1c1d4cf39950193#npm:19.0.4"],\
           ["@vitejs/plugin-react", "virtual:502a8ef1ee31280291343453a54a4de23612aac97816f5ab8b69b06d4534faf613cc9b29f244f481e5355cb209aa4472451bbfcd1c98fbaec1c1d4cf39950193#npm:4.3.4"],\
@@ -1195,6 +1197,38 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@tabler/icons", [\
+      ["npm:3.30.0", {\
+        "packageLocation": "../../.yarn/berry/cache/@tabler-icons-npm-3.30.0-7b930b546d-10c0.zip/node_modules/@tabler/icons/",\
+        "packageDependencies": [\
+          ["@tabler/icons", "npm:3.30.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@tabler/icons-react", [\
+      ["npm:3.30.0", {\
+        "packageLocation": "../../.yarn/berry/cache/@tabler-icons-react-npm-3.30.0-830469df2e-10c0.zip/node_modules/@tabler/icons-react/",\
+        "packageDependencies": [\
+          ["@tabler/icons-react", "npm:3.30.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:502a8ef1ee31280291343453a54a4de23612aac97816f5ab8b69b06d4534faf613cc9b29f244f481e5355cb209aa4472451bbfcd1c98fbaec1c1d4cf39950193#npm:3.30.0", {\
+        "packageLocation": "./.yarn/__virtual__/@tabler-icons-react-virtual-4e81a8fde8/3/.yarn/berry/cache/@tabler-icons-react-npm-3.30.0-830469df2e-10c0.zip/node_modules/@tabler/icons-react/",\
+        "packageDependencies": [\
+          ["@tabler/icons-react", "virtual:502a8ef1ee31280291343453a54a4de23612aac97816f5ab8b69b06d4534faf613cc9b29f244f481e5355cb209aa4472451bbfcd1c98fbaec1c1d4cf39950193#npm:3.30.0"],\
+          ["@tabler/icons", "npm:3.30.0"],\
+          ["@types/react", "npm:19.0.10"],\
+          ["react", "npm:19.0.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/babel__core", [\
       ["npm:7.20.5", {\
         "packageLocation": "../../.yarn/berry/cache/@types-babel__core-npm-7.20.5-4d95f75eab-10c0.zip/node_modules/@types/babel__core/",\
@@ -1338,6 +1372,16 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/@types-json-schema-npm-7.0.15-fd16381786-10c0.zip/node_modules/@types/json-schema/",\
         "packageDependencies": [\
           ["@types/json-schema", "npm:7.0.15"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/node", [\
+      ["npm:22.13.8", {\
+        "packageLocation": "../../.yarn/berry/cache/@types-node-npm-22.13.8-e280e411c3-10c0.zip/node_modules/@types/node/",\
+        "packageDependencies": [\
+          ["@types/node", "npm:22.13.8"],\
+          ["undici-types", "npm:6.20.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1703,6 +1747,8 @@ const RAW_RUNTIME_STATE =
           ["@mantine/charts", "virtual:502a8ef1ee31280291343453a54a4de23612aac97816f5ab8b69b06d4534faf613cc9b29f244f481e5355cb209aa4472451bbfcd1c98fbaec1c1d4cf39950193#npm:7.17.1"],\
           ["@mantine/core", "virtual:502a8ef1ee31280291343453a54a4de23612aac97816f5ab8b69b06d4534faf613cc9b29f244f481e5355cb209aa4472451bbfcd1c98fbaec1c1d4cf39950193#npm:7.17.1"],\
           ["@mantine/hooks", "virtual:502a8ef1ee31280291343453a54a4de23612aac97816f5ab8b69b06d4534faf613cc9b29f244f481e5355cb209aa4472451bbfcd1c98fbaec1c1d4cf39950193#npm:7.17.1"],\
+          ["@tabler/icons-react", "virtual:502a8ef1ee31280291343453a54a4de23612aac97816f5ab8b69b06d4534faf613cc9b29f244f481e5355cb209aa4472451bbfcd1c98fbaec1c1d4cf39950193#npm:3.30.0"],\
+          ["@types/node", "npm:22.13.8"],\
           ["@types/react", "npm:19.0.10"],\
           ["@types/react-dom", "virtual:502a8ef1ee31280291343453a54a4de23612aac97816f5ab8b69b06d4534faf613cc9b29f244f481e5355cb209aa4472451bbfcd1c98fbaec1c1d4cf39950193#npm:19.0.4"],\
           ["@vitejs/plugin-react", "virtual:502a8ef1ee31280291343453a54a4de23612aac97816f5ab8b69b06d4534faf613cc9b29f244f481e5355cb209aa4472451bbfcd1c98fbaec1c1d4cf39950193#npm:4.3.4"],\
@@ -4190,6 +4236,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["undici-types", [\
+      ["npm:6.20.0", {\
+        "packageLocation": "../../.yarn/berry/cache/undici-types-npm-6.20.0-bd21e669af-10c0.zip/node_modules/undici-types/",\
+        "packageDependencies": [\
+          ["undici-types", "npm:6.20.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["unique-filename", [\
       ["npm:4.0.0", {\
         "packageLocation": "../../.yarn/berry/cache/unique-filename-npm-4.0.0-bfc100c4e3-10c0.zip/node_modules/unique-filename/",\
@@ -4405,7 +4460,7 @@ const RAW_RUNTIME_STATE =
           ["@types/jiti", null],\
           ["@types/less", null],\
           ["@types/lightningcss", null],\
-          ["@types/node", null],\
+          ["@types/node", "npm:22.13.8"],\
           ["@types/sass", null],\
           ["@types/sass-embedded", null],\
           ["@types/stylus", null],\

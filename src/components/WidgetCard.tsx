@@ -1,17 +1,25 @@
 import { Card, Image, Text } from "@mantine/core";
+import logo from "@/assets/blue-logo.svg"
 
-const WidgetCard = () => {
+type WidgetCardProps = {
+  p?: number;
+}
+
+const WidgetCard = ({...props} : WidgetCardProps) => {
   return (
-    <Card shadow="sm" padding="lg" radius="md" withBorder>
-      <Card.Section>
+    <Card shadow="sm" padding={props.p} radius="md" withBorder>
+      <Card.Section p={props.p}>
         <Image
           height={200}
           width={200}
           alt="Widget"
-          src="https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          src={logo}
+          radius="md"
+          bd="1px solid hsl(40, 95%, 70%)"
+          p={4}
         />
       </Card.Section>
-      <Card.Section>
+      <Card.Section p={props.p}>
         <Text size="lg">Widget</Text>
         <Text size="sm" c="dimmed">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
