@@ -1,9 +1,11 @@
-import {AppShell, Burger, Flex, Text, Divider, Group, Image, NavLink, Avatar} from "@mantine/core";
+import {AppShell, Burger, Flex, Text, Divider, Group, Image, NavLink, Avatar, Card} from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import WidgetCard from "./WidgetCard.tsx";
 import logo from "@/assets/sand-logo.svg"
 import {useState} from "react";
 import {IconHome2, IconMoneybag, IconUsersGroup} from "@tabler/icons-react"
+import BarNone from "./BarNone.tsx";
+import { barData } from "./bar-data.ts";
 
 const TerraformaShell = () => {
   const [opened, { toggle }] = useDisclosure();
@@ -54,6 +56,19 @@ const TerraformaShell = () => {
         />
       </AppShell.Navbar>
       <AppShell.Main>
+        <Flex
+          mb={12}
+          gap="md"
+          justify="center"
+          direction="row"
+          wrap="wrap"
+        >
+          <Card>
+            <Card.Section w={800} h={600}>
+              <BarNone data={barData} />
+            </Card.Section>
+          </Card>
+        </Flex>
         <Flex
           mih={50}
           gap="md"

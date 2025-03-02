@@ -13,6 +13,8 @@
     "@mantine/charts": "^7.17.1",
     "@mantine/core": "^7.17.1",
     "@mantine/hooks": "^7.17.1",
+    "@nivo/bar": "^0.88.0",
+    "@nivo/core": "^0.88.0",
     "@tabler/icons-react": "^3.30.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
