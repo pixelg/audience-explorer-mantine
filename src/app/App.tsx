@@ -3,11 +3,11 @@
 import '@mantine/core/styles.css';
 
 import { MantineProvider } from '@mantine/core';
-import TerraformaShell from "../components/TerraformaShell.tsx";
+import Dashboard from "../components/Dashboard.tsx";
 
 const App  = () => (
   <MantineProvider defaultColorScheme="dark">
-    <TerraformaShell />
+    <Dashboard />
   </MantineProvider>
 )
 

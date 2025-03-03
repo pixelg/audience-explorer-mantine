@@ -10,9 +10,9 @@ import {
   IconUsersGroup
 } from "@tabler/icons-react"
 import {Link, Outlet} from "@tanstack/react-router";
-import "./navbar.css";
+import "../assets/navbar.css";
 
-const TerraformaShell = () => {
+const Dashboard = () => {
   const [opened, { toggle }] = useDisclosure();
   const [name] = useState("Brent Lee");
   const [active, setActive] = useState(0);
@@ -76,4 +76,4 @@ const TerraformaShell = () => {
   )
 }
 
-export default TerraformaShell;
+export default Dashboard;

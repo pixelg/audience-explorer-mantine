@@ -1,5 +1,5 @@
 // Define the type for a single bar datum
-export interface BarDatum {
+export interface BarPlotTypes {
   country: string;
   'hot dog': number;
   'hot dogColor': string;

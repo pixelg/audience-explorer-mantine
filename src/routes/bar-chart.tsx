@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import {Card, Flex, Title} from "@mantine/core";
-import BarNone from "@/components/BarNone.tsx";
-import {barData} from "@/components/bar-data.ts";
+import BarNone from "@/components/charts/BarNone.tsx";
+import {barData} from "@/mocks/bar-data.ts";
 
 export const Route = createFileRoute('/bar-chart')({
   component: BarChartComponent,

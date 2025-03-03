@@ -1,8 +1,8 @@
 import { ResponsiveBar } from '@nivo/bar'
-import { BarDatum } from "@/types/BarDatum.ts";
+import { BarPlotTypes } from "@/types/BarPlotTypes.ts";
 
 interface BarProps {
-  data: readonly BarDatum[];
+  data: readonly BarPlotTypes[];
 }
 
 const theme = {

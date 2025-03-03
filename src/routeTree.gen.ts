@@ -11,18 +11,11 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as DashboardImport } from './routes/dashboard'
 import { Route as BoxPlotChartImport } from './routes/box-plot-chart'
 import { Route as BarChartImport } from './routes/bar-chart'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
-
-const DashboardRoute = DashboardImport.update({
-  id: '/dashboard',
-  path: '/dashboard',
-  getParentRoute: () => rootRoute,
-} as any)
 
 const BoxPlotChartRoute = BoxPlotChartImport.update({
   id: '/box-plot-chart',
@@ -67,13 +60,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BoxPlotChartImport
       parentRoute: typeof rootRoute
     }
-    '/dashboard': {
-      id: '/dashboard'
-      path: '/dashboard'
-      fullPath: '/dashboard'
-      preLoaderRoute: typeof DashboardImport
-      parentRoute: typeof rootRoute
-    }
   }
 }
 
@@ -83,14 +69,12 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/bar-chart': typeof BarChartRoute
   '/box-plot-chart': typeof BoxPlotChartRoute
-  '/dashboard': typeof DashboardRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/bar-chart': typeof BarChartRoute
   '/box-plot-chart': typeof BoxPlotChartRoute
-  '/dashboard': typeof DashboardRoute
 }
 
 export interface FileRoutesById {
@@ -98,15 +82,14 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/bar-chart': typeof BarChartRoute
   '/box-plot-chart': typeof BoxPlotChartRoute
-  '/dashboard': typeof DashboardRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/bar-chart' | '/box-plot-chart' | '/dashboard'
+  fullPaths: '/' | '/bar-chart' | '/box-plot-chart'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/bar-chart' | '/box-plot-chart' | '/dashboard'
-  id: '__root__' | '/' | '/bar-chart' | '/box-plot-chart' | '/dashboard'
+  to: '/' | '/bar-chart' | '/box-plot-chart'
+  id: '__root__' | '/' | '/bar-chart' | '/box-plot-chart'
   fileRoutesById: FileRoutesById
 }
 
@@ -114,14 +97,12 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BarChartRoute: typeof BarChartRoute
   BoxPlotChartRoute: typeof BoxPlotChartRoute
-  DashboardRoute: typeof DashboardRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BarChartRoute: BarChartRoute,
   BoxPlotChartRoute: BoxPlotChartRoute,
-  DashboardRoute: DashboardRoute,
 }
 
 export const routeTree = rootRoute
@@ -136,8 +117,7 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/bar-chart",
-        "/box-plot-chart",
-        "/dashboard"
+        "/box-plot-chart"
       ]
     },
     "/": {
@@ -148,9 +128,6 @@ export const routeTree = rootRoute
     },
     "/box-plot-chart": {
       "filePath": "box-plot-chart.tsx"
-    },
-    "/dashboard": {
-      "filePath": "dashboard.tsx"
     }
   }
 }

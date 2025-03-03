@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import {Card, Flex, Title} from "@mantine/core";
-import {BoxPlot} from "@/components/BoxPlot";
-import {boxPlotData} from "@/components/box-plot-data.ts";
+import {BoxPlot} from "@/components/charts/BoxPlot.tsx";
+import {boxPlotData} from "@/mocks/box-plot-data.ts";
 
 export const Route = createFileRoute('/box-plot-chart')({
   component: BoxPlotRoute,
