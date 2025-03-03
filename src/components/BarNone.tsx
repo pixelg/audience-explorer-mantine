@@ -1,7 +1,29 @@
 import { ResponsiveBar } from '@nivo/bar'
+import { BarDatum } from "@/types/BarDatum.ts";
 
-// @ts-ignore
-const MyResponsiveBar = ({ data }) => (
+interface BarProps {
+  data: readonly BarDatum[];
+}
+
+const theme = {
+  axis: {
+    ticks: {
+      line: {
+        stroke: 'white'
+      },
+      text: {
+        fill: 'white'
+      }
+    },
+    legend: {
+      text: {
+        fill: 'white'
+      }
+    }
+  }
+};
+
+const MyResponsiveBar = ({ data } : BarProps) => (
   <ResponsiveBar
     data={data}
     keys={[
@@ -18,6 +40,7 @@ const MyResponsiveBar = ({ data }) => (
     valueScale={{ type: 'linear' }}
     indexScale={{ type: 'band', round: true }}
     colors={{ scheme: 'nivo' }}
+    theme={theme}
     defs={[
       {
         id: 'dots',
