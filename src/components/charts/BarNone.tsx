@@ -1,38 +1,10 @@
 import { ResponsiveBar } from '@nivo/bar'
 import { BarPlotTypes } from "@/types/BarPlotTypes.ts";
+import { BarNoneTheme } from "@/components/charts/BarNoneTheme.tsx";
 
 interface BarProps {
   data: readonly BarPlotTypes[];
 }
-
-const theme = {
-  tooltip: {
-    container: {
-      background: '#333', // dark background for the tooltip container
-      color: 'white'
-    }
-  },
-  axis: {
-    ticks: {
-      line: {
-        stroke: 'white'
-      },
-      text: {
-        fill: 'white'
-      }
-    },
-    legend: {
-      text: {
-        fill: 'white'
-      }
-    },
-    legends: {
-      text: {
-        fill: 'white'
-      }
-    },
-  }
-};
 
 const MyResponsiveBar = ({ data } : BarProps) => (
   <ResponsiveBar
@@ -51,7 +23,7 @@ const MyResponsiveBar = ({ data } : BarProps) => (
     valueScale={{ type: 'linear' }}
     indexScale={{ type: 'band', round: true }}
     colors={{ scheme: 'nivo' }}
-    theme={theme}
+    theme={BarNoneTheme}
     defs={[
       {
         id: 'dots',

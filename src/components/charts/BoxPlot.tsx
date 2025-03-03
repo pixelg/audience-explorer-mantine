@@ -1,43 +1,6 @@
 import {ResponsiveBoxPlot} from '@nivo/boxplot'
 import {BoxPlotData} from "@/types/BoxPlotTypes.ts";
-
-const theme = {
-  translation: {},
-  // Axis styling
-  axis: {
-    domain: {
-      line: {
-        stroke: 'white'
-      }
-    },
-    ticks: {
-      line: {
-        stroke: 'white'
-      },
-      text: {
-        fill: 'white'
-      }
-    },
-    legend: {
-      text: {
-        fill: 'white'
-      }
-    }
-  },
-  // Legends (if rendered outside the axis)
-  legends: {
-    text: {
-      fill: 'white'
-    }
-  },
-  // Optionally, adjust tooltip for better contrast on a dark background
-  tooltip: {
-    container: {
-      background: '#333', // dark background for the tooltip container
-      color: 'white'
-    }
-  }
-};
+import { BoxPlotTheme } from "@/components/charts/BoxPlotTheme.tsx";
 
 type BoxPlotProps = {
   data: BoxPlotData;
@@ -86,7 +49,7 @@ export const BoxPlot = ({data /* see data tab */}: BoxPlotProps) => (
       legendOffset: -40,
       truncateTickAt: 0
     }}
-    theme={theme}
+    theme={BoxPlotTheme}
     colors={{scheme: 'nivo'}}
     borderRadius={2}
     borderWidth={2}
