@@ -11,7 +11,7 @@ function BarChartComponent() {
   return (
     <>
       <Flex mb="lg" justify="center">
-        <Title>Bar Chart</Title>
+        <Title>Sales By Audience Group</Title>
       </Flex>
 
       <Flex

@@ -15,6 +15,26 @@ import "./navbar.css";
 const TerraformaShell = () => {
   const [opened, { toggle }] = useDisclosure();
   const [name] = useState("Brent Lee");
+  const [active, setActive] = useState(0);
+
+  const navLinks = [
+    { label: "Home", href: "/", icon: <IconHome2 size={16} stroke={1.5} /> },
+    { label: "Bar Chart", href: "/bar-chart", icon: <IconChartBar size={16} stroke={1.5} /> },
+    { label: "Box Plot Chart", href: "/box-plot-chart", icon: <IconChartBarPopular size={16} stroke={1.5} /> },
+    { label: "Audience Groups", href: "", icon: <IconUsersGroup size={16} stroke={1.5} />},
+    { label: "Trade", href: "#", icon: <IconMoneybag size={16} stroke={1.5} />},
+  ].map((link, index) => (
+    <Link key={link.label} to={link.href}>
+      <NavLink
+        href=""
+        key={`nav-${link.label}`}
+        label={link.label}
+        leftSection={link.icon}
+        active={active === index}
+        onClick={() => setActive(index)}
+        />
+    </Link>
+  ));
 
   return (
     <AppShell
@@ -47,42 +67,7 @@ const TerraformaShell = () => {
         </Flex>
       </AppShell.Header>
       <AppShell.Navbar className="navbar" p="md">
-        <Link to="/">
-          <NavLink
-            className="navbar"
-            href=""
-            label="Home"
-            leftSection={<IconHome2 size={16} stroke={1.5} />}
-          />
-        </Link>
-
-        <Link to="/bar-chart">
-          <NavLink
-            href=""
-            label="Bar Chart"
-            leftSection={<IconChartBar size={16} stroke={1.5} />}
-          />
-        </Link>
-
-        <Link to="/box-plot-chart">
-          <NavLink
-            href=""
-            label="Box Plot Chart"
-            leftSection={<IconChartBarPopular size={16} stroke={1.5} />}
-          />
-        </Link>
-
-        <NavLink
-          href="#"
-          label="Audience Groups"
-          leftSection={<IconUsersGroup size={16} stroke={1.5} />}
-        />
-
-        <NavLink
-          href="#"
-          label="Trade"
-          leftSection={<IconMoneybag size={16} stroke={1.5} />}
-        />
+        {navLinks}
       </AppShell.Navbar>
       <AppShell.Main>
         <Outlet />

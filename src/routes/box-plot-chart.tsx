@@ -11,7 +11,7 @@ function BoxPlotRoute() {
   return (
     <>
       <Flex mb="lg" justify="center">
-        <Title>Box Plot Chart</Title>
+        <Title>Sales Across Groups</Title>
       </Flex>
 
       <Flex
