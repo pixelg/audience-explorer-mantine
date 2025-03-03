@@ -1,0 +1,6 @@
+.navbar a{
+    text-decoration: none;
+}
+.navbar a:visited {
+    color: var(--mantine-primary-color-0);
+}
