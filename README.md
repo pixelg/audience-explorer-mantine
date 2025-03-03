@@ -10,22 +10,18 @@ _SparrowTV's Audience Explorer enables media companies to create and manage prec
 - **Runtime:** [Nodejs v23](https://nodejs.org/en)
 - **Package/Dependency manager:** [pnpm v10](https://pnpm.io)
 - **Language:** [Typescript v5](https://www.typescriptlang.org)
-- **UI Components:** [TailwindCSS v3](https://tailwindcss.com/), [Shadcn](https://ui.shadcn.com/), [Storybook v8.5](https://storybook.js.org/)
-- **Libraries:** React Router 7 (?switch to tanstack/router?), Tanstack/Query, ?Zustand? (use state manage)
+- **UI Components:** [Mantine Components Library](https://mantine.dev/), [Storybook v8.5](https://storybook.js.org/)
+- **Libraries:** [Tanstack Router](https://tanstack.com/router/latest)
 - **Tooling, testing, build:** [Vite](https://vite.dev/), vite-test, [Playwright](https://playwright.dev/)
 - **SCM CI/CD:** Git, GitHub, GitHub Actions, GitHub Projects
-- **Chart/Graph** TODO: [nivo](https://nivo.rocks/bar/), [chart.js](https://www.chartjs.org/), [D3.js](https://d3js.org/)
-- **?Container?:** TODO: [Docker](https://www.docker.com/) (if necessary)
-- **?DB/Dataflow/MQ?**: TODO: Postgres, MariaDB, MongoDB, RabbitMQ, REDIS, Firebase
-- **?Hosting/Cloud?:** TODO: AWS (Lambda, CDK, SAM), GCP,
-
+- **Chart/Graph** TODO: [nivo](https://nivo.rocks/bar/)
 ---
 
 ## Run Locally
 
 ```bash
 # clone the repository
-git clone https://github.com/pixelg/audience-explorer.git .
+git clone https://github.com/pixelg/audience-explorer-mantine.git .
 # change into project directory
 cd audience-explorer
 # install dependencies NOTE: npm install can also be used, but pnpm usually has much better performance
