@@ -1,6 +1,9 @@
 import {AppShell, Burger, Flex, Text, Divider, Group, Image, NavLink, Avatar} from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import logo from "@/assets/sand-logo.svg"
+
+import logo from "@/assets/sand-logo.svg";
+import classes from "./Dashboard.module.css";
+
 import {useState} from "react";
 import {
   IconChartBar,
@@ -8,9 +11,8 @@ import {
   IconHome2,
   IconMoneybag,
   IconUsersGroup
-} from "@tabler/icons-react"
-import {Link, Outlet} from "@tanstack/react-router";
-import "../assets/navbar.css";
+} from "@tabler/icons-react";
+import { Link, Outlet } from "@tanstack/react-router";
 
 const Dashboard = () => {
   const [opened, { toggle }] = useDisclosure();
@@ -24,9 +26,10 @@ const Dashboard = () => {
     { label: "Audience Groups", href: "", icon: <IconUsersGroup size={16} stroke={1.5} />},
     { label: "Trade", href: "#", icon: <IconMoneybag size={16} stroke={1.5} />},
   ].map((link, index) => (
-    <Link key={link.label} to={link.href}>
+    <Link className={classes.navbar} key={link.label} to={link.href}>
       <NavLink
         href=""
+        className={classes.navbar}
         key={`nav-${link.label}`}
         label={link.label}
         leftSection={link.icon}
